@@ -1,0 +1,589 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* إخفاء المحتوى الأول */
+#content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header {
+    background-color: #ffffff;
+    color: #6e6e6e;
+    padding: 7px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+}
+.logo {
+    margin-right: 40px;
+    height: 25px; /* ارتفاع الصورة */
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+.nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    font-style: bold;
+}
+.menu-icon {
+    color: rgba(0, 0, 0, 0.527);
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    animation: move 2s ;
+}
+@keyframes move {
+   
+    50% {
+      transform: translateX(-100px);
+    }
+   
+  }
+@media (max-width: 834px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 40px; /* علشان نبعد القائمة عن الهدر */
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: right; /* علشان نركز النص في شاشة الهاتف */
+   height: 100vh;
+    }
+  
+    .nav.active {
+        display: flex;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+/* التعديل الجديد علشان الكلام يظهر في نص الشاشة */
+@media (min-width: 834px) {
+    .header {
+        justify-content: center; /* علشان نركز العناصر في المنتصف */
+    }
+    .nav {
+        margin-right: 20px; /* علشان نبعد القائمة عن اللوجو */
+    }
+}
+
+
+.header2 {
+    background-color: rgba(224, 224, 224, 0.4);
+    backdrop-filter: blur(3px);
+    color: rgb(0, 0, 0);
+    padding: 7px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* لضمان ظهوره فوق المحتوى */
+    transition: margin-top 0.3s ease-in-out; /* تأثير ناعم عند تغيير المسافة */
+    .nav.active + .header2 {
+        margin-top: 100vh; /* يجعل الهيدر الثاني يظهر بعد القائمة */
+    }
+    
+}
+
+.header2-nav button {
+    background-color: #1f53ff;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 40px;
+    margin-right: 50px;
+}
+
+.header2-nav a {
+    color: rgb(34, 34, 34);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Social {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(31, 31, 31);
+    font-size: 30px;
+}
+
+@media (max-width: 834px) {
+    .header2-nav button {
+        font-size: 12px;
+        padding: 5px 12px;
+        margin-left: 20px;
+        margin-right: 0px;
+    }
+
+    .header2-nav a {
+        font-size: 15px;
+    }
+
+    .Social {
+        font-size: 18px;
+    }
+}
+
+a{
+  color: #1f53ff;
+}
+p {
+    margin-top: 1%;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+.header + p {
+  margin-top: 40px; /* Adjust this value as needed */
+}
+
+@media (max-width: 800px) {
+  p {
+      margin: 20px;
+      margin-top: 5%;
+      font-size: 14px;
+  }
+}
+.contenar{
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+.h1-top{
+    background: linear-gradient(to bottom,#000000,#555555);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top:70px;
+    margin: 20px;
+    font-size: 90px;
+    align-items: center;
+    opacity: 0.3;
+    transform: translateY(20px);
+    animation: fadeInUp 2s forwards;
+}
+.h2-top{
+    background: linear-gradient(to right,#008cff,#931fff,#ff7300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.ordar{
+    background-color: #008cff;
+    color: white;
+    border: none;
+    padding: 11px 21px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.img-top{
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: scale(0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* إضافة ظل خلف الصورة */
+    transition: box-shadow 2s; /* تأثير ناعم عند تغيير الظل */
+    animation: fadeIn 3s forwards, scaleUp 3s 3s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.h3-top{
+    background: linear-gradient(to left,#00beaf,#0066ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+    margin: 50px;
+    align-items: center;
+}
+@media (max-width: 800px) {
+.h1-top{
+    font-size: 60px;
+}
+.h2-top{
+    font-size: 20px;
+}
+.h3-top{
+    font-size: 16px;
+}
+.ordar{
+    font-size: 15px;
+padding:8px 14px ;
+}
+.img-top{
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+  }
+.progct1 {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin: 200px 40px 100px 40px;
+    padding: 20px; /* Add padding for better spacing */
+    text-align: center; /* Center the text inside the box */
+}
+
+.text-progct1 {
+    padding: 30px;
+    font-size: 24px; /* Adjust font size as needed */
+    color: #000000; /* Set text color */
+}
+.h1-progct1 {
+    background: linear-gradient(to right, #008cff, #931fff, #ff7300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p-progct1 {
+    margin: 0; /* Adjust margin as needed */
+    padding-top: 20px; /* Add padding for better spacing */
+    font-size: 20px; /* Adjust font size as needed */
+    color: #000000; /* Set text color */
+    text-align: right; /* Align text to the right */
+    font-weight: bold;
+}
+.p2-progct1 {
+    padding-top: 20px; /* Add padding for better spacing */
+    font-size: 20px; /* Adjust font size as needed */
+    color: #000000; /* Set text color */
+    text-align: right; /* Align text to the right */
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .progct1 {
+        margin: 100px 20px 50px 20px; /* Adjust margins for smaller screens */
+        padding: 30px; /* Adjust padding for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .text-progct1 {
+        padding: 0;
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .h1-progct1 {
+        margin: 0;
+        font-size: 35px; /* Adjust font size for smaller screens */
+    }
+
+    .p-progct1 {
+        font-size: 17px; /* Adjust font size for smaller screens */
+        padding-top: 30px; /* Adjust padding for smaller screens */
+    }
+    .p2-progct1{
+        margin: 0;
+        font-size: 17px; /* Adjust font size for smaller screens */
+    }
+}
+.progct2{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    background-color: #ffffff;
+}
+.text-1-progct-2{
+    margin-bottom: 60px;
+
+    padding: 20px;
+    align-items: center;
+    width: 50%;
+}
+.text-2-progct-2{
+    margin-bottom: 60px;
+    padding: 20px;
+    align-items: center;
+    width: 50%;
+}
+.h1-text-1-progct-2{
+    background: linear-gradient(to right, #008cff, #931fff, #ff7300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+.h1-text-2-progct-2 {
+    background: linear-gradient(to right, #520000, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p1-text-1-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p2-text-1-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p3-text-1-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p4-text-1-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p5-text-1-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p1-text-2-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p2-text-2-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p3-text-2-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p4-text-2-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p5-text-2-progct-2{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 4s forwards;
+    text-align: right; /* Align text to the right */
+}
+
+.p-fff{
+    color: #ffffff;
+}
+
+
+@media (max-width: 800px) {
+    .progct2{
+        padding: 10px;
+    }
+    .text-1-progct-2{
+      padding: 0;
+      margin: 0;
+        width: 100%;
+    }
+    .text-2-progct-2{
+     padding: 0;
+     margin: 0;
+        width: 100%;
+    }
+    .h1-text-2-progct-2 {
+        margin: 10px 20px 0 0;
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+    .h1-text-1-progct-2 {
+        margin: 10px 10px 0 0;
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+    .p1-text-1-progct-2,
+    .p2-text-1-progct-2,
+    .p3-text-1-progct-2,
+    .p4-text-1-progct-2,
+    .p5-text-1-progct-2 {
+        margin: 10px 10px 0 0;
+        
+        font-size: 13px; /* Adjust font size for smaller screens */
+    }
+    .p1-text-2-progct-2,
+    .p2-text-2-progct-2,
+    .p3-text-2-progct-2,
+    .p4-text-2-progct-2,
+    .p5-text-2-progct-2 {
+        margin: 10px 20px 0 11.9px;
+        
+        font-size: 13px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pp{
+    margin: 0;
+        text-align: right;
+        background-color: #f3f3f3;
+        padding: 20px;
+        
+       
+      }
+      
+      .pp p{
+        margin: 10px;
+        width: 94%;
+        text-align: right;
+    
+        font-size: 15px;
+        color: #000000;
+      }
+  
+        .pp a{
+        color: #008cff;
+
+        }
+      
+      hr {
+        border: 0;
+        border-top: 2px solid #e6e6e6;  /* اللون والسُمك */
+        width: 97%;  /* عرض الخط */
+        margin: 20px auto;  /* المسافة من الأعلى والأسفل */
+      }
