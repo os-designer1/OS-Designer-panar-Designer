@@ -587,3 +587,8 @@ padding:8px 14px ;
         width: 97%;  /* عرض الخط */
         margin: 20px auto;  /* المسافة من الأعلى والأسفل */
       }
+      @media (max-width: 834px){
+        .pp p{
+            font-size: 12px;
+        }
+      }
