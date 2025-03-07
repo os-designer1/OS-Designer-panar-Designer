@@ -343,12 +343,12 @@ padding:8px 14px ;
     }
 
     .p-progct1 {
-        font-size: 17px; /* Adjust font size for smaller screens */
+        font-size: 15px; /* Adjust font size for smaller screens */
         padding-top: 30px; /* Adjust padding for smaller screens */
     }
     .p2-progct1{
         margin: 0;
-        font-size: 17px; /* Adjust font size for smaller screens */
+        font-size: 15px; /* Adjust font size for smaller screens */
     }
 }
 .progct2{
