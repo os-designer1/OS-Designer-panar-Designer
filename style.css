@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&family=Readex+Pro&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
+    font-family: "Zain", sans-serif;
+    font-weight: 700;
+    font-style: normal;    background-color: #f0f0f0;
     justify-content: center;
     align-items: center;
 }
@@ -109,6 +112,9 @@ body{
 }
 
 .header2-nav button {
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #1f53ff;
     color: white;
     border: none;
@@ -116,7 +122,6 @@ body{
     border-radius: 25px;
     cursor: pointer;
     font-size: 15px;
-    font-weight: bold;
     margin-left: 40px;
     margin-right: 50px;
 }
@@ -211,6 +216,9 @@ p {
     }
 }
 .ordar{
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: #008cff;
     color: white;
     border: none;
