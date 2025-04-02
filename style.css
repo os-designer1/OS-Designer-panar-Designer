@@ -171,33 +171,37 @@ body{
     flex-direction: column;
     background-color: #ffffff;
 }
+
 .h1-top{
-    background: linear-gradient(to bottom,#00455a,#1a2422);
+    background: linear-gradient(to bottom,#122033,#0004ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-top:70px;
-    margin: 20px;
     font-size: 90px;
-    align-items: center;
+    margin-bottom: 600px;
     opacity: 0.3;
     transform: translateY(20px);
     animation: fadeInUp 2s forwards;
+    position: absolute;
 }
+
 .p-contenar{
     font-size: 25px;
     color: #4b4b4b;
     text-align: center;
 
 }
+
 .span-p-contenar{
     color: #000;
 }
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 .ordar{
     font-family: "Zain", sans-serif;
     font-weight: 400;
@@ -246,8 +250,9 @@ body{
 }
 @media (max-width: 800px) {
 .h1-top{
-    font-size: 60px;
+    font-size: 20px;
     padding-top: 0px;
+    margin-bottom: 270px;
 }
 .h2-top{
     font-size: 20px;
